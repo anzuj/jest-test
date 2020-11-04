@@ -1,9 +1,10 @@
-# Basic VUE template
+# Jest playground
 
+* Jest unit tests
+* Vue
 * Vuex
 * Vuetify
-* Router
-* IE11 polyfills
-* CSS file structure
+* Vue Router
+
 
 
