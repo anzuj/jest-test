@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1 class="text-center">JEST testing playground</h1>
-    
+
     <v-card class="mx-auto mt-2" width="600">
-      <Counter :title="title" :count="count" @increment="count++"/>
+      <Counter :count="count" @increment="count++"/>
     </v-card>
   </div>
 </template>
