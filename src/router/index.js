@@ -6,8 +6,18 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/counter',
+    name: 'counter',
+    component: () => import('../views/CounterWrapper.vue')
+  },
+  {
+    path: '/api',
+    name: 'api',
+    component: () => import('../views/Apis.vue')
   }
 ]
 

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
 
-import Home from "@/views/Home.vue";
+import CounterWrapper from "@/views/CounterWrapper.vue";
 import Counter from "@/components/Counter.vue";
 
 import { createLocalVue, mount } from "@vue/test-utils";
@@ -25,22 +25,22 @@ describe("Counter.vue", () => {
 
   // TEST 1 ----------------------------------------------------
   it("Mounts properly", () => {
-    const wrapper = mountFactory(Home);
-    expect(wrapper.findComponent(Home).exists()).toBe(true);
+    const wrapper = mountFactory(CounterWrapper);
+    expect(wrapper.findComponent(CounterWrapper).exists()).toBe(true);
   });
 
   // TEST 2 ----------------------------------------------------
   it("Read nested component data", () => {
-    const wrapper = mountFactory(Home);
+    const wrapper = mountFactory(CounterWrapper);
     // #sample is in child component Counter
     expect(wrapper.find("#sample").text()).toBe("cat");
   });
 
   // TEST 3 ----------------------------------------------------
-  it("Counter button changes count in Home", () => {
-    const wrapper = mountFactory(Home);
+  it("Counter button changes count in CounterWrapper", () => {
+    const wrapper = mountFactory(CounterWrapper);
 
-    //check if initial count in Home is 0
+    //check if initial count in CounterWrapper is 0
     expect(wrapper.vm.count).toBe(0);
 
     //click btn in Counter (child component)

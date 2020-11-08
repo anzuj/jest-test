@@ -2,11 +2,36 @@
   <div id="app">
     <v-app>
       <v-main fluid fill-height>
+        <h1 @click="handleNav" class="text-center hover-pointer">
+          JEST testing playground
+          <v-img
+            class="d-inline-block"
+            src="https://jestjs.io/img/jest.png"
+            contain
+            width="40"
+          ></v-img>
+        </h1>
+        <v-card class="mx-auto mt-2 pa-3" max-width="600">
           <router-view></router-view>
+        </v-card>
       </v-main>
     </v-app>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["count"],
+  data: () => ({}),
+  methods: {
+    handleNav() {
+      if (this.$route.name !== "home") {
+        this.$router.push({name: "home"});
+      }
+    },
+  },
+};
+</script>
 
 <style>
 #app {
