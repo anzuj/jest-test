@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter.vue Count prop displays correctly 1`] = `
+<div class="container">
+  <p id="sample">cat</p>
+  <h2>Prop count:</h2>
+  <div class="row align-center">
+    <div class="col col-3">
+      <div id="nr" class="mr-6">5</div>
+    </div>
+    <div class="d-flex col"><button type="button" class="mx-2 v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light v-size--small indigo--text" id="incrementBtn"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i> Increase prop
+      </span></button></div>
+  </div>
+  <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
+  <h2>Local count:</h2>
+  <div class="row align-center">
+    <div class="col col-3">
+      <div id="nr" class="mr-6">0</div>
+    </div>
+    <div class="d-flex col"><button type="button" class="mx-2 v-btn v-btn--depressed v-btn--flat v-btn--outlined theme--light v-size--small indigo--text" id="incrementLocal"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-plus theme--light"></i> Increase local
+      </span></button></div>
+  </div>
+</div>
+`;
