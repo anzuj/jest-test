@@ -5,6 +5,8 @@ export const lootAdjectives = [
   "Breathtaking",
   "Treacherous",
   "Glittery",
+  "Tender",
+  "Panic-inducing",
   "Flexible",
   "Golden",
   "Vibrating",

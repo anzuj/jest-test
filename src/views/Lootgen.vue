@@ -3,34 +3,61 @@
     <!-- <v-btn class="d-flex mx-auto mb-4" @click="chooseDescription"
       >Generate description</v-btn
     > -->
-    <h4 class="mb-2">I'm going to battle with...</h4>
-    <div class="d-flex align-center">
-      <!-- loot image -->
-      <div class="bg">
-        <v-img
-          :key="quality"
-          :src="require(`@/assets/lootgen/${quality}.png`)"
-        ></v-img>
-        <v-img
-          :key="weapon"
-          class="lootPic loot-pop"
-          :src="require(`@/assets/lootgen/weapons/${weapon}.png`)"
-        ></v-img>
-      </div>
 
-      <!-- loot description -->
-      <div>
-        <h3 :style="{ color: qualityColor }">
-          {{ adjective }} {{ weapon }} of {{ origin }}
-        </h3>
-        <div class="quality" :style="{ backgroundColor: labelColor }">
-          {{ quality }}
+    <h4 class="mb-2">Random loot generator</h4>
+    <v-card flat class="lootCard">
+
+  
+
+      <div class="d-flex align-center lootSection">
+        <!-- loot image -->
+        <div class="bg">
+          <v-img
+            :key="quality"
+            :src="require(`@/assets/lootgen/${quality}.png`)"
+          ></v-img>
+          <v-img
+            :key="weapon"
+            class="lootPic loot-pop"
+            :src="require(`@/assets/lootgen/weapons/${weapon}.png`)"
+          ></v-img>
         </div>
-        <p class="description">"{{ description }}"</p>
-      </div>
-    </div>
 
-    <v-btn class="d-flex mx-auto my-4" @click="getItem">Generate another</v-btn>
+        <!-- loot description -->
+        <div>
+          <h3 :style="{ color: qualityColor }">
+            {{ adjective }} {{ weapon }} of {{ origin }}
+          </h3>
+          <div class="quality" :style="{ backgroundColor: labelColor }">
+            {{ quality }}
+          </div>
+          <p class="description">"{{ description }}"</p>
+        </div>
+      </div>
+
+              <!-- coin -->
+        <div class="lootSection">
+
+                {{ coin.gold }}
+      <v-img
+        class="coinPic"
+        :src="require('@/assets/lootgen/gold.png')"
+      ></v-img>
+      {{ coin.silver }}
+      <v-img
+        class="coinPic"
+        :src="require('@/assets/lootgen/silver.png')"
+      ></v-img>
+      {{ coin.copper }}
+      <v-img
+        class="coinPic"
+        :src="require('@/assets/lootgen/copper.png')"
+      ></v-img>
+
+        </div>
+
+      <v-btn :ripple="false" dark color="#1E4C89" class="d-flex mt-3 mx-auto" @click="getItem">Generate another</v-btn>
+    </v-card>
   </div>
 </template>
 
@@ -45,6 +72,11 @@ export default {
     this.getItem();
   },
   data: () => ({
+    coin: {
+      gold: null,
+      silver: null,
+      copper: null,
+    },
     weapon: "Dagger",
     quality: "Uncommon",
     description: null,
@@ -85,6 +117,7 @@ export default {
       this.chooseDescription();
       this.chooseAdjective();
       this.chooseOrigin();
+      this.generateCoin();
     },
     chooseWeapon() {
       let pickedWeapon = this.weapons[this.chooseRandom(this.weapons.length)];
@@ -139,6 +172,11 @@ export default {
         return this.chooseOrigin();
       }
     },
+    generateCoin() {
+      this.coin.gold = Math.floor(Math.random() * 10) + 1;
+      this.coin.silver = Math.floor(Math.random() * 99) + 1;
+      this.coin.copper = Math.floor(Math.random() * 99) + 1;
+    },
   },
   computed: {
     qualityColor() {
@@ -175,11 +213,31 @@ export default {
   margin-right: 10px;
 }
 
+.lootCard {
+  background-color: #e9dcad;
+  background-image: url("https://www.transparenttextures.com/patterns/old-wall.png") !important;
+  background-repeat: repeat;
+  padding: 10px;
+}
+
+.lootSection {
+    /* border: 1px solid rgb(192, 166, 151); */
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius: 5px;
+    margin-bottom: 3px;
+    padding: 5px;
+}
 .lootPic {
   position: absolute;
   top: 4%;
   left: 2%;
   transform: scale(0.95);
+}
+
+.coinPic {
+  width: 12px;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .quality {
