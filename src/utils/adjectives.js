@@ -1,0 +1,18 @@
+export const lootAdjectives = [
+  "Fantastic",
+  "Slippery",
+  "Huge",
+  "Breathtaking",
+  "Treacherous",
+  "Glittery",
+  "Flexible",
+  "Golden",
+  "Vibrating",
+  "Slightly Smelly",
+  "Awesome",
+  "Ergonomic",
+  "Very Inefficient",
+  "Inappropriate",
+  "Self Aware",
+  "Stubborn",
+];

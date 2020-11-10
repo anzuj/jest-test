@@ -1,0 +1,31 @@
+export const weaponDescriptions =  [
+    "Making your enemies full of holes with deadly speed and precision.",
+    "Every weapon collector's dream come true!",
+    "Yielding this is no easy task.",
+    "Engraved pattern of a raccoon may hold secrets of yore.",
+    "Found in the hands of the last great defender.",
+    "Best used with caution and baby oil.",
+    "Is known to be triggered by approximity of cats",
+    "Its massive pommel is maybe trying to compensate for something.",
+    "Crocodile leather grips are back in style.",
+    "Just large enough to scare a common orc.",
+    "Unfortunately dissolves in water.",
+    "Swish and flick.",
+    "Best combined with a glitter bomb",
+    "Almost perfect if it would not be pocket sized.",
+    "It vibrates of dark magic and many lost lives.",
+    "Very effective in winning arguments.",
+    "Turning a back to its wielder may be the last thing you do.",
+    "Piece of trash, if you ask the elves.",
+    "It has proven to betray its previous owners.",
+    "Empowered by a phoenix tailfeather.",
+    "Spiders flee from it.",
+    "Defeats a leprechaun in 2 blinks of an eye.",
+    "Curious... very curious, the way this weapon hums.",
+    "Not the most effective against rats.",
+    "Poke them with the pointy end.",
+    "Astoundingly effective in slicing enemies and cheese.",
+
+];
+
+

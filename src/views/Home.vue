@@ -28,7 +28,7 @@ export default {
         link: "counter",
         icon: "mdi-numeric-0-box-multiple-outline",
       },
-      { text: "APIs", link: "api", icon: "mdi-api" },
+      { text: "APIs", link: "api", icon: "mdi-api" },{ text: "Loot", link: "loot", icon: "mdi-sword" }
     ],
   }),
   methods: {

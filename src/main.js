@@ -4,6 +4,8 @@ import vuetify from './plugins/vuetify';
 import router from './router'
 import store from './store'
 
+Vue.use(require('vue-faker'));
+
 require('@/styles/main.css')
 
 Vue.config.productionTip = false

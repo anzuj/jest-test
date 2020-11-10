@@ -18,6 +18,11 @@ Vue.use(VueRouter)
     path: '/api',
     name: 'api',
     component: () => import('../views/Apis.vue')
+  },
+  {
+    path: '/loot',
+    name: 'loot',
+    component: () => import('../views/Lootgen.vue')
   }
 ]
 
